@@ -13,10 +13,13 @@
     <script>
         const container = document.querySelector('[data-js="container"]')
         /* recebe 3 argumentos: element html, objeto -> props, children (filho do elemento) */
+       const span = React.createElement('span', null, 'Bootcamp React')
+       const space = React.createElement('span', null,  ' ')
+       const span2 = React.createElement('span', null, 'Agora sim')
         const h1 = React.createElement(
             'h1', 
             {id: 'title', 'data-js':'meucu'}, 
-            'Bootcamp React' 
+            [span, space, span2]
         )
         
         ReactDOM.render(h1, container)
