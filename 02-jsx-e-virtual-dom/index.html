@@ -12,17 +12,22 @@
 <body>
     <div data-js="container"></div>
     <script type="text/babel">
-        const container = document.querySelector('[data-js="container"]')
         /* recebe 3 argumentos: element html, objeto -> props, children (filho do elemento) */
-       const span = React.createElement('span', null, 'Bootcamp React')
-       const space = React.createElement('span', null,  ' ')
-       const span2 = React.createElement('span', null, 'Agora sim')
-        const h1 = React.createElement(
-            'h1', 
-            {id: 'title', 'data-js':'meucu'}, 
-            [span, space, span2]
-        )
         
+        // const h1 = React.createElement(
+        //     'h1', 
+        //     {id: 'title', 'data-js':'titulo-js'}, 
+        //     React.createElement('span', null, 'Bootcamp React'),
+        //     React.createElement('b', null, 'Agora sim') 
+        //     )
+
+const h1 = (
+    <h1 id="title" data-js="titulo-js">
+        <span> Bootcamp React</span>
+    </h1>
+)
+            
+        const container = document.querySelector('[data-js="container"]')
         ReactDOM.render(h1, container)
     </script>
     
